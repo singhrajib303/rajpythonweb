@@ -49,35 +49,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-# If on Django < 1.10
-MIDDLEWARE_CLASSES = [
-    # ... or whatever is below for you ...
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # ... or whatever is above for you ...
-    'applicationinsights.django.ApplicationInsightsMiddleware',   # Add this middleware to the end
-]
 
-
-# If on Django >= 1.10
-MIDDLEWARE = [
-    # ... or whatever is below for you ...
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # ... or whatever is above for you ...
-    'applicationinsights.django.ApplicationInsightsMiddleware',   # Add this middleware to the end
-]
 APPLICATION_INSIGHTS = {
     # (required) Your Application Insights instrumentation key
     'ikey': "dcb17b1f-2bb5-4189-979b-f7ad1c6e18e4",
